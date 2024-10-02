@@ -27,14 +27,14 @@ const RegistrarFuncionario = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError(''); // Reset error message
-        setSuccessMessage(''); // Reset success message
+        setError('');
+        setSuccessMessage('');
 
         try {
             await axios.post('api/funcionarios', { nombres, apellidos, cedula, fechaNacimiento });
             setSuccessMessage('Funcionario registrado exitosamente.'); // Mensaje de éxito
-            fetchFuncionarios(); // Fetch updated list after successful submission
-            setNombres(''); // Clear input fields
+            fetchFuncionarios(); 
+            setNombres(''); 
             setApellidos('');
             setCedula('');
             setFechaNacimiento('');

@@ -128,7 +128,7 @@ const Reportes = () => {
                     </thead>
                     <tbody>
                     {reportes.map((registro) => (
-                        <tr key={registro._id}> {/* Cambié 'id' por '_id' para reflejar la estructura de MongoDB */}
+                        <tr key={registro._id}> {}
                             <td>{registro.horaEntrada}</td>
                             <td>{registro.horaSalida}</td>
                             <td>{calcularHorasTrabajadas(registro.horaEntrada, registro.horaSalida)}</td>

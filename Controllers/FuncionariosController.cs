@@ -33,7 +33,7 @@ namespace RRHH_System.Controllers
             catch (Exception ex)
             {
                 // Log the exception message
-                _logger.LogError($"Error en Get: {ex.Message}"); // Usar el logger para registrar el error
+                _logger.LogError($"Error en Get: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -84,7 +84,7 @@ namespace RRHH_System.Controllers
                 return BadRequest("Funcionario no puede ser nulo.");
             }
 
-            // Asegúrate de que el ID del funcionario coincide con el ID en la URL
+            
             if (funcionario.Id != id)
             {
                 return BadRequest("El ID del funcionario no coincide con el ID en la URL.");

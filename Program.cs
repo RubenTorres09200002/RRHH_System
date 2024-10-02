@@ -16,7 +16,7 @@ builder.Services.AddSingleton<MongoDbContext>(s =>
 builder.Services.AddControllers();
 
 // Agregar servicios de autorización
-builder.Services.AddAuthorization(); // <--- Agregar esto
+builder.Services.AddAuthorization();
 
 // Configurar CORS
 builder.Services.AddCors(options =>
@@ -35,6 +35,6 @@ app.UseHttpsRedirection();
 // Usar la política de CORS antes de la autorización
 app.UseCors("AllowSpecificOrigin");
 
-app.UseAuthorization(); // Esto debe ir después de UseCors
+app.UseAuthorization(); 
 app.MapControllers(); 
 app.Run();
