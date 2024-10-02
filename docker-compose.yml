@@ -1,0 +1,31 @@
+﻿version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"  # Exponiendo MongoDB en el puerto 27017
+    volumes:
+      - mongodb_data:/data/db  # Para que los datos persistan entre reinicios de los contenedores
+    networks:
+      - app-network  # Definir una red para que el backend y MongoDB se comuniquen
+
+  rrhh_system:  # Backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"  # El backend escucha en el puerto 5000
+    depends_on:
+      - mongodb  # Asegura que MongoDB esté activo antes de levantar el backend
+    environment:
+      - ConnectionStrings__MongoDb=mongodb://mongodb:27017  # Usar el nombre del servicio de MongoDB como host
+    networks:
+      - app-network  # Conectar el backend y MongoDB en la misma red
+
+volumes:
+  mongodb_data:  # Define el volumen para persistir los datos de MongoDB
+
+networks:
+  app-network:  # Definir la red compartida

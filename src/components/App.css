@@ -1,0 +1,103 @@
+﻿/* src/App.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Borde para las celdas */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para los encabezados */
+}
+
+nav {
+    background-color: #789ec7; /* Color de fondo azul */
+    padding: 1rem; /* Espaciado interno */
+}
+
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin relleno */
+    display: flex; /* Disposición en fila */
+    justify-content: space-around; /* Espaciado uniforme */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Margen lateral entre elementos */
+}
+
+nav ul li a {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Color amarillo al pasar el cursor */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffc107; /* Línea de indicador para la página activa */
+}
+
+/* RegistrarFuncionario.css */
+.container {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Centrar el formulario con margen superior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Color de fondo claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1, h2 { /* Añadir estilos para el encabezado */
+    text-align: center; /* Centrar el texto */
+    color: #007bff; /* Color azul */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+input, select {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #ced4da; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+    overflow: hidden; /* Evitar el desbordamiento */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    text-overflow: ellipsis; /* Agregar "..." al final si el texto es demasiado largo */
+}
+
+input:focus, select:focus {
+    border-color: #007bff; /* Color de borde azul al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin-top: 10px; /* Espacio superior */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+.error {
+    color: red; /* Color rojo para mensajes de error */
+    text-align: center; /* Centrar el texto de error */
+    margin-top: 10px; /* Espacio superior */
+}
